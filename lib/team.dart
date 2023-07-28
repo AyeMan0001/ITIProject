@@ -56,7 +56,7 @@ class _TeamPageState extends State<TeamPage> {
            children: [
            Icon(Icons.person_3_outlined, color: Colors.purple,size: 50,), 
            Text(
-            "Mohamed Ayman",
+            "Mohamed Ayman Osman",
              style: TextStyle(fontSize: 20, color: Colors.black),
              textAlign: TextAlign.center,
              ),
