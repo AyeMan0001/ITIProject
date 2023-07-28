@@ -4,7 +4,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shopping_app/login.dart';
-import 'package:shopping_app/welcomepage.dart';
 import 'package:shopping_app/widgets/rating&views.dart';
 import 'package:shopping_app/widgets/save.dart';
 import 'package:shopping_app/widgets/vouchers.dart';
@@ -40,24 +39,46 @@ class _AccountPageState extends State<AccountPage> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Center(
-                  child: Text("Singed in as " + user.email!,
-              style: TextStyle(
-                  fontSize: 30,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold),
-            ),
+
+                SizedBox(
+                  height: 20,
+                ),
+
+                Row(
+                  children: [
+                    const Icon(
+                      Icons.account_circle,
+                      size: 120,
+                    ),
+                    Center(
+                      child: Text( user.email!,
+                        style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    ),
+                  ],
                 )
                 ,
+
+                SizedBox(
+                  height: 30,
+                ),
                 Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Text(
                     "My Shopping Account ",
                     style: TextStyle(
-                        fontSize: 16,
+                        fontSize: 20,
                         color: Colors.black,
                         fontWeight: FontWeight.bold),
                   ),
+                ),
+
+                SizedBox(
+                  height: 20,
                 ),
                 TextButton.icon(
                   onPressed: () {
@@ -72,12 +93,12 @@ class _AccountPageState extends State<AccountPage> {
                     width: 190,
                     child: Text(
                       "Order",
-                      style: TextStyle(fontSize: 18, color: Colors.black),
+                      style: TextStyle(fontSize: 20, color: Colors.black),
                     ),
                   ),
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
                 TextButton.icon(
                   onPressed: () {
@@ -92,12 +113,12 @@ class _AccountPageState extends State<AccountPage> {
                     width: 190,
                     child: Text(
                       "Ratings & Reviews",
-                      style: TextStyle(fontSize: 18, color: Colors.black),
+                      style: TextStyle(fontSize: 20, color: Colors.black),
                     ),
                   ),
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
                 TextButton.icon(
                   onPressed: () {
@@ -111,12 +132,12 @@ class _AccountPageState extends State<AccountPage> {
                     width: 190,
                     child: Text(
                       "Vouchers",
-                      style: TextStyle(fontSize: 18, color: Colors.black),
+                      style: TextStyle(fontSize: 20, color: Colors.black),
                     ),
                   ),
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
                 TextButton.icon(
                   onPressed: () {
@@ -130,12 +151,12 @@ class _AccountPageState extends State<AccountPage> {
                     width: 190,
                     child: Text(
                       "Saved items",
-                      style: TextStyle(fontSize: 18, color: Colors.black),
+                      style: TextStyle(fontSize: 20, color: Colors.black),
                     ),
                   ),
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
                 TextButton.icon(
                   onPressed: () {
@@ -150,12 +171,12 @@ class _AccountPageState extends State<AccountPage> {
                     width: 190,
                     child: Text(
                       "About Us",
-                      style: TextStyle(fontSize: 18, color: Colors.black),
+                      style: TextStyle(fontSize: 20, color: Colors.black),
                     ),
                   ),
                 ),
                 SizedBox(
-                  height: 80,
+                  height: 70,
                 ),
                 Center(
                   child: ElevatedButton(
@@ -163,10 +184,10 @@ class _AccountPageState extends State<AccountPage> {
 
                       FirebaseAuth.instance.signOut().then((value){
                         print("Signed out");
-                      Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const LoginPage()),
-                      );
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const LoginPage()),
+                        );
                       });
 
                     },
@@ -174,11 +195,11 @@ class _AccountPageState extends State<AccountPage> {
                       backgroundColor: Colors.purple,
                       elevation: 5,
                       padding: EdgeInsets.only(left: 30, right: 30),
-                      minimumSize: const Size(20.0, 50.0),
+                      minimumSize: const Size(200.0, 50.0),
                     ),
                     child: const Text(
-                      "Logout",
-                      style: TextStyle(color: Colors.white, fontSize: 20),
+                      "Log Out",
+                      style: TextStyle(color: Colors.white, fontSize: 25),
                     ),
                   ),
                 )],

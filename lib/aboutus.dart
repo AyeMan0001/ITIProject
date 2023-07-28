@@ -14,6 +14,7 @@ class _AbotUsPageState extends State<AbotUsPage> {
   Widget build(BuildContext context) {
      final _formKey = GlobalKey<FormState>();
      return Scaffold(
+       appBar:AppBar(backgroundColor:  Colors.white),
    
   
         body: SingleChildScrollView( 
@@ -25,7 +26,7 @@ class _AbotUsPageState extends State<AbotUsPage> {
           
 
           const SizedBox(
-           height: 80,
+           height: 20,
           ),
 
           Container( 

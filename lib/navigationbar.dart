@@ -4,7 +4,7 @@ import 'package:shopping_app/widgets/categories.dart';
 import 'package:shopping_app/widgets/home.dart';
 
 class Navigation extends StatefulWidget {
-  
+
   const Navigation({super.key});
 
   @override
@@ -13,7 +13,7 @@ class Navigation extends StatefulWidget {
 
 class _NavigationState extends State<Navigation> {
 
-  
+
   // ignore: non_constant_identifier_names
   int selectedIndex = 0;
   List<Widget> page = [
@@ -24,18 +24,18 @@ class _NavigationState extends State<Navigation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
+
       body: page[selectedIndex],
-     
+
       bottomNavigationBar: BottomNavigationBar(
 
-        
-          
+
+
           type: BottomNavigationBarType.fixed,
           currentIndex: selectedIndex,
-          // selectedFontSize: 15,
-          // iconSize: 30,
-          selectedItemColor: Colors.black,
+          selectedFontSize: 18,
+          iconSize: 25,
+          selectedItemColor: Colors.purple,
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: ("Home") ,),
             BottomNavigationBarItem(icon: Icon(Icons.category), label: "Categories"),
@@ -48,5 +48,5 @@ class _NavigationState extends State<Navigation> {
           }),
     );
   }
-  
+
 }

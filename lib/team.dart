@@ -12,13 +12,8 @@ class _TeamPageState extends State<TeamPage> {
   Widget build(BuildContext context) {
     final _formKey = GlobalKey<FormState>();
      return Scaffold(
-      //  appBar:AppBar(backgroundColor: Colors.purple,
-      //  title: const Text("Developer Team", 
-      //  style:TextStyle(fontSize: 30, color: Colors.black),
-      //   ),
-      //   centerTitle: true,
-      //  ),
-   
+       appBar:AppBar(backgroundColor:  Colors.white),
+
   
         body: SingleChildScrollView( 
           
@@ -28,7 +23,7 @@ class _TeamPageState extends State<TeamPage> {
           
           children: [
             const SizedBox(
-           height: 50,
+           height: 20,
           ),
             
 
@@ -41,7 +36,7 @@ class _TeamPageState extends State<TeamPage> {
           )),
 
            const SizedBox(
-           height: 40,
+           height: 20,
           ),
 
           const Text("Developer Team", 
