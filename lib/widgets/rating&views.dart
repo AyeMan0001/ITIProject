@@ -20,16 +20,6 @@ class _ViewsPageState extends State<ViewsPage> {
             style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
           ),
           centerTitle: true,
-          leading: IconButton(
-            icon: Icon(Icons.arrow_back),
-            onPressed: () {
-              Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const AccountPage()),
-                    );
-            },
-          ),
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.shopping_cart),
